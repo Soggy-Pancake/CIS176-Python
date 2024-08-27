@@ -1,7 +1,7 @@
 #print("Loading Chapter 1 Exersize 1!")
 
 def fullAssignmentName() -> str:
-    return "Chapter 1 Exersize 1"
+    return "Chapter 1 Exercise 1"
 
 def main():
     print("Hello, Mike!")
@@ -18,3 +18,6 @@ def main():
     print(11 // 3)
     # input used to keep print statements on screen 
     input("Finished Running...")
+
+if __name__ == "__main__":
+    main()

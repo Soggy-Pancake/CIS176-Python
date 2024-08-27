@@ -21,7 +21,9 @@ def printMenu() -> None:
     for i in range(len(assignmentModules)):
         print(f"{i + 1}. {assignmentModules[i].fullAssignmentName()}")
 
-print(assignmentModules)
+
+#print(assignmentModules)
+
 
 while True:
     os.system("cls")
@@ -43,7 +45,6 @@ while True:
         else:
             # Run assignment :3 
             assignmentModules[selected - 1].main()
-
 
     except Exception as e:
         print(e, type(e))
