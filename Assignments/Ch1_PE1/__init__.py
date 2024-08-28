@@ -1,6 +1,6 @@
 #print("Loading Chapter 1 Exersize 1!")
 
-def fullAssignmentName() -> str:
+def assignmentName() -> str:
     return "Chapter 1 Exercise 1"
 
 def main():
@@ -20,4 +20,5 @@ def main():
     input("Finished Running...")
 
 if __name__ == "__main__":
+    assignmentName() #just to give a warning when I copy paste this to other assignments
     main()

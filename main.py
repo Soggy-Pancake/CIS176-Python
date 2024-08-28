@@ -1,4 +1,4 @@
-import os, sys, importlib
+import os, sys, importlib, traceback
 
 print("Importing assignments!")
 
@@ -10,23 +10,24 @@ except:
     sys.exit()
 
 for assignment in os.listdir("Assignments"):
-    #print(f"Assignment {assignment}")
-    #from Assignments import Ch1Ex1
+    #leftover from testing if making each assignment a class worked (Made things overcomplicated for no reason)
+    if not os.path.isdir(os.path.join("Assignments",assignment)) or assignment.startswith("__"):
+        continue
     try:
         assignmentModules.append(importlib.import_module(assignment))
     except Exception as e:
-        print(f"Import FAIL for assignment {assignment} : {e}")
+        print(f"Import FAIL for assignment {assignment} {type(e)} : {e}")
+        traceback.print_exc()
 
 def printMenu() -> None:
+    os.system("cls")
     for i in range(len(assignmentModules)):
-        print(f"{i + 1}. {assignmentModules[i].fullAssignmentName()}")
+        print(f"{i + 1}. {assignmentModules[i].assignmentName()}")
 
 
 #print(assignmentModules)
 
-
 while True:
-    os.system("cls")
     printMenu()
     print("0. Exit")
     try:
