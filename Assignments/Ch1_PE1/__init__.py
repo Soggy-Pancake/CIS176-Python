@@ -1,7 +1,7 @@
 #print("Loading Chapter 1 Exersize 1!")
 
 def assignmentName() -> str:
-    return "Chapter 1 Exercise 1"
+    return "Programming Assignment 1"
 
 def main():
     print("Hello, Mike!")

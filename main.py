@@ -32,6 +32,7 @@ while True:
     print("0. Exit")
     try:
         selected = input("Input Assignment: ")
+        print("")
 
         if selected == "0":
             sys.exit()
