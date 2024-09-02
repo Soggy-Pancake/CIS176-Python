@@ -1,4 +1,4 @@
-import os, sys, importlib, traceback
+import os, sys, importlib, traceback, time
 
 print("Importing assignments!")
 
@@ -45,8 +45,14 @@ while True:
         if selected > len(assignmentModules):
             raise ModuleNotFoundError
         else:
-            # Run assignment :3 
-            assignmentModules[selected - 1].main()
+            
+            try:
+                assignmentModules[selected - 1].main() # Run assignment :3 
+            except Exception as e:
+                # allow seeing the traceback and exception in assignment instead of being dumped out to the menu with no error message, or an error message for the menu
+                print("Exception in assignment!")
+                print(traceback.print_exc())
+                input("Enter to return to menu...")
 
     except Exception as e:
         print(e, type(e))
@@ -54,3 +60,4 @@ while True:
             print("Assignment not found!")
         elif type(e) == ValueError:
             print('Please input number before the assignment name! (Ex with "1. Assignment" input the number 1)')
+            time.sleep(5)
