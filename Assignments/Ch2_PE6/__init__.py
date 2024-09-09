@@ -7,7 +7,7 @@ and the total of the sale (which is the sum of the amount of purchase plus the t
 """
 
 def assignmentName() -> str:
-    return "Programming Assignment 2 (Sales Tax)"
+    return "Chapter 2: Sales Tax"
 
 def main():
     while True:

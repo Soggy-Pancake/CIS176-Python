@@ -45,9 +45,9 @@ while True:
         if selected > len(assignmentModules):
             raise ModuleNotFoundError
         else:
-            
             try:
                 assignmentModules[selected - 1].main() # Run assignment :3 
+                input("Enter to return to menu...")
             except Exception as e:
                 # allow seeing the traceback and exception in assignment instead of being dumped out to the menu with no error message, or an error message for the menu
                 print("Exception in assignment!")
