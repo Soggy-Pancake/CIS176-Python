@@ -10,7 +10,7 @@ except:
     sys.exit()
 
 for assignment in os.listdir("Assignments"):
-    #leftover from testing if making each assignment a class worked (Made things overcomplicated for no reason)
+    # ignore folders starting with __ as im using that as the prefix for the template and ignoring __pycache__
     if not os.path.isdir(os.path.join("Assignments",assignment)) or assignment.startswith("__"):
         continue
     try:
