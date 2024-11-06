@@ -18,6 +18,7 @@ for assignment in os.listdir("Assignments"):
     except Exception as e:
         print(f"Import FAIL for assignment {assignment} {type(e)} : {e}")
         traceback.print_exc()
+        input("...")
 
 def printMenu() -> None:
     os.system("cls")
